@@ -38,7 +38,6 @@ public class Packet {
             buff.put(data, 0, dataSize);
         }
         byte[] sendData = buff.array();
-
         return new DatagramPacket(sendData, sendSize, address, port);
     }
 

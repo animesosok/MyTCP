@@ -5,7 +5,7 @@ import java.net.*;
 import java.nio.ByteBuffer;
 
 
-public class TSPSocket {
+public class TCPSocket {
     private DatagramSocket socket;
     private InetAddress destAddress;
     private int destPort;
@@ -20,7 +20,7 @@ public class TSPSocket {
     private final int CONNECT_TRIES = 32;
 
 
-    public TSPSocket(double bad) {
+    public TCPSocket(double bad) {
         badconnect = bad;
     }
     // Send datagrams and change seqNumber
@@ -233,7 +233,6 @@ public class TSPSocket {
         }
         sendACK(seqNumber);
         seqNumber++;
-
         int dataSize = size;
         int recvNum = size / Packet.MAX_DATA_SIZE;
         if (size % Packet.MAX_DATA_SIZE > 0){

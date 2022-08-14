@@ -10,7 +10,7 @@ public class Server {
         StartServer();
     }
     public static void StartServer() throws IOException {
-        TSPSocket socket= new TSPSocket(0);
+        TCPSocket socket= new TCPSocket(0);
         socket.listen(12313);
         String fileToSend = "text.txt";
 

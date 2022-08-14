@@ -8,7 +8,7 @@ public class Client {
         StartClient();
     }
     public static void StartClient() throws IOException {
-        TSPSocket socket= new TSPSocket(0);
+        TCPSocket socket= new TCPSocket(0);
         socket.connect("localhost", 12313);
         byte[] data ;
 
